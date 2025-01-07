@@ -27,11 +27,12 @@ export default function List() {
           <div className="food" key={idx}>
             <img src={`/food${idx}.png`} className="food-img" />
             <h4>{product}</h4>
-            <span> {cnt}</span>
+            <span> {cnt[idx]}</span>
             <button
               onClick={() => {
-                setCnt(cnt[idx] + 1);
-                console.log("click");
+                let copy = [...cnt];
+                copy[idx]++;
+                setCnt(copy);
               }}
             >
               +
