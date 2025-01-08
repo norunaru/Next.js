@@ -1,9 +1,10 @@
 export default function Write() {
   return (
-    <div>
+    <div className="p-20">
       <h1>글작성</h1>
-      <form action={"/api/test"} method="POST">
-        <input name="title"></input>
+      <form action={"/api/post/new"} method="POST">
+        <input name="title" placeholder="글제목" required />
+        <input name="content" placeholder="내용" />
         <button type="submit">버튼</button>
       </form>
     </div>
